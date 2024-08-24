@@ -19,7 +19,7 @@ export function VideoCard({
   return (
     <Card
       sx={{
-        width: { xs: "88vw", sm: "358px", md: "400px" },
+        width: { xs: "88vw", sm: "358px", md: "320px", xl: "400px" },
         boxShadow: "none",
         borderRadius: "0",
         overflow: "hidden",
@@ -30,7 +30,7 @@ export function VideoCard({
           image={snippet?.thumbnails?.high?.url || demoThumbnailUrl}
           alt={snippet?.title}
           sx={{
-            width: { xs: "100%", sm: "358px", md: "400px" },
+            width: { xs: "100%", sm: "358px", md: "320px", xl: "400px" },
             height: 180,
           }}
         />
