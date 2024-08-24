@@ -19,9 +19,10 @@ export function VideoCard({
   return (
     <Card
       sx={{
-        width: { xl: "400px", xs: "100%", sm: "358px", md: "320px" },
+        width: { xs: "88vw", sm: "358px", md: "400px" },
         boxShadow: "none",
-        borderRadius: 0,
+        borderRadius: "0",
+        overflow: "hidden",
       }}
     >
       <Link to={videoId ? `/video/${videoId}` : `/video/cV2gBU6hKfY`}>
@@ -29,12 +30,12 @@ export function VideoCard({
           image={snippet?.thumbnails?.high?.url || demoThumbnailUrl}
           alt={snippet?.title}
           sx={{
-            width: { md: "100%", xs: "100%", sm: "358px" },
+            width: { xs: "100%", sm: "358px", md: "400px" },
             height: 180,
           }}
         />
       </Link>
-      <CardContent sx={{ backgroundColor: "#1E1E1E", height: "106px" }}>
+      <CardContent sx={{ backgroundColor: "#000", height: "106px" }}>
         <Link to={videoId ? `/video/${videoId}` : demoVideoUrl}>
           <Typography variant="subtitle1" fontWeight="bold" color="#FFF">
             {snippet?.title.slice(0, 60) || demoVideoTitle.slice(0, 60)}
