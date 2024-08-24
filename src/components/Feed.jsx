@@ -8,7 +8,7 @@ export function Feed() {
   const [videos, setVideos] = useState([]);
   useEffect(() => {
     fetchFromApi(`search?part=snippet&q=${selectedCategory}`).then((data) =>
-      setVideos(data.items)
+      setVideos(data?.items)
     );
   }, [selectedCategory]);
 
